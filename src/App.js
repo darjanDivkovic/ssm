@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react'
+
+import Loader from './Components/Loader'
+import Home from './Components/Home'
 
 function App() {
+
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [level, setLevel] = useState(5)
+  console.log(isLoaded)
+  console.log(level)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main'>
+      <button onClick={()=> setIsLoaded(prevIsLoaded => !prevIsLoaded)}>
+              Change is loaded
+      </button>
+      <button onClick={() => setLevel(prevLevel => prevLevel > 0 ? --prevLevel : prevLevel)}>-</button>
+      <button onClick={() => setLevel(prevLevel => prevLevel < 10 ? ++prevLevel : prevLevel)}>+</button>
+      {!isLoaded ? <Loader level={level}/> : <Home />}
     </div>
   );
 }
