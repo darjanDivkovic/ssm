@@ -29,15 +29,15 @@ export default function Home() {
                     <img src={phone} className='phone' alt='Be patient...'/>
                     <img src={note1} className='note1' alt='Be patient...'/>
                     <img src={note2} className='note2' alt='Be patient...'/>
-                    <a href='' className='fb'>
+                    <a href='https://www.facebook.com/SolucijaMladihIMudrih' target='_' className='fb'>
                         <img src={fb} className='fb-icon' alt='Be patient...'/>
-                        SAVEZ MLADIH I MUDRIH
+                        SOLUCIJA MLADIH I MUDRIH
                     </a>
                     
                 </div>
                 <div className='nav-bar'>
                 <img src={logo} className='logo-small' alt='Be patient...'/>
-                <p className='logo-text'>SAVEZ MLADIH I MUDRIH</p>
+                <p className='logo-text'>SOLUCIJA MLADIH I MUDRIH</p>
                 <div className='nav-side-div'>
                 <p>PRIJAVA</p>
                 <img src={userIcon} className='user-icon' alt='Be patient...'/>    
