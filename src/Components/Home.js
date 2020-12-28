@@ -15,6 +15,7 @@ import note1 from '../Resources/note-1.png'
 import note2 from '../Resources/note-2.png'
 import fb from '../Resources/fb.png'
 import registerIcon from '../Resources/register-icon.png'
+import arrows from '../Resources/arrows.png'
 
 export default function Home() {
     return (
@@ -32,7 +33,14 @@ export default function Home() {
                         <img src={fb} className='fb-icon' alt='Be patient...'/>
                         SOLUCIJA MLADIH I MUDRIH
                     </a>
-                    
+                    <div className='small-navbar-links'>
+                        <a>FACEBOOK</a>
+                        <a>INSTAGRAM</a>
+                    </div>
+                    <div className='direction-div'>
+                        <p>ŠTA TREBATE URADITI ?</p>
+                        <img src={arrows} className='arrows' alt='Be patient...'/>
+                    </div>
                 </div>
                 <div className='nav-bar'>
                 <img src={logo} className='logo-small' alt='Be patient...'/>
