@@ -19,7 +19,6 @@ import registerIcon from '../Resources/register-icon.png'
 export default function Home() {
     return (
         <div className='home-container'>
-            <Login />
             <div className='home-paper'>
                 <div className='paper-back'>
                     <img src={vawes} className='vawes' alt='Be patient...'/>

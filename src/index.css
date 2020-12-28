@@ -176,8 +176,8 @@ body {
 }
 
 .logo-small {
-  width: 54px;
-  height: 54px;
+  width: 40px;
+  height: 40px;
 }
 
 .logo-text {
@@ -523,3 +523,63 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+@media only screen and (max-width: 321px) {
+  .home-paper {
+    width: 100%;
+  }
+
+  .paper-back {
+    height: 100vh;
+  }
+
+  .mouse, .note1, .note2, .phone, .coffe {
+    visibility: hidden;
+  }
+
+  .laptop {
+    animation: none;
+  }
+
+  .nav-bar {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  @keyframes appearNavbar {
+    0% {
+      opacity: 0;
+      margin-top: 30px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 20px;
+    }
+  }
+  .nav-side-div {
+    display: none;
+  }
+  .logo-small {
+    margin-left: 40px;
+  }
+  .logo-text {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .hero-text {
+    margin-left: -40px;
+    width: 160px;
+  }
+  .laptop {
+    height: 200px;
+    top: 80px;
+    right: -80px;
+  }
+  .register-btn {
+    margin-left: -40px;
+    height: 40px;
+  }
+  .vawes {
+    display: none;
+  }
+} 
