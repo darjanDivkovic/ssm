@@ -611,6 +611,9 @@ body {
     left: auto;
     right: auto;
   }
+  .fb:nth-of-type(1){
+    display: none;
+  }
   .small-navbar-links {
     display: block;
     position: absolute;
