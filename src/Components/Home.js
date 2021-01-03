@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 import Cards from './Cards'
 import Login from './Login'
@@ -18,9 +18,15 @@ import registerIcon from '../Resources/register-icon.png'
 import arrows from '../Resources/arrows.png'
 
 export default function Home() {
+    const myRef = useRef(null)
+
+    const executeSrcoll = () =>{
+        console.log('here')
+        myRef.current.scrollIntoView()
+    } 
     return (
         <div className='home-container'>
-            <div className='home-paper'>
+            <div ref={myRef} className='home-paper'>
                 <div className='paper-back'>
                     <img src={vawes} className='vawes' alt='Be patient...'/>
                     <img src={laptop} className='laptop' alt='Be patient...'/>
@@ -59,7 +65,7 @@ export default function Home() {
                 </div>
                 <Cards />
                 <div className='bottom-mobile'>
-                <img src={arrows} className='arrows' alt='Be patient...'/>
+                <img onClick={() => executeSrcoll()}src={arrows} className='arrows' alt='Be patient...'/>
                 <p>NAZAD NA VRH</p>
                 <button className='register-btn'>
                     <img src={registerIcon} class='register-icon'/>

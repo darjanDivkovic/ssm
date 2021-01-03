@@ -1,8 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
   font-family: 'Barlow', sans-serif;
+  
 }
 
 .main {
@@ -114,6 +119,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #F3F0F0;
+  scroll-behavior: smooth;
 } 
 
 .home-paper {
