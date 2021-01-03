@@ -607,12 +607,13 @@ body {
     display: none;
   }
   .fb {
+   display: none; 
+  }
+  .fb.bot {
+    display: flex;
     bottom: 0;
     left: auto;
     right: auto;
-  }
-  .fb:nth-of-type(1){
-    display: none;
   }
   .small-navbar-links {
     display: block;

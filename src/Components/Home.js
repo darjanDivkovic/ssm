@@ -65,7 +65,7 @@ export default function Home() {
                     <img src={registerIcon} class='register-icon'/>
                     REGISTRUJ SE
                 </button>
-                <a href='https://www.facebook.com/SolucijaMladihIMudrih' target='_' className='fb'>
+                <a href='https://www.facebook.com/SolucijaMladihIMudrih' target='_' className='fb bot'>
                         <img src={fb} className='fb-icon bottom' alt='Be patient...'/>
                         SOLUCIJA MLADIH I MUDRIH
                     </a>
