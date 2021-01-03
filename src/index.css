@@ -27,6 +27,10 @@ body {
   flex-direction: column;
 }
 
+.vawes1, .vawes2, .vawes3 {
+  display: none;
+} 
+
 .logo-img {
   height: 15%;
   margin-top: 180px;
@@ -234,6 +238,7 @@ body {
 
 .laptop {
   position: absolute;
+  z-index: 1;
   right: 80px;
   bottom: 220px;
   height: 50%;
@@ -555,14 +560,40 @@ body {
   .paper-back {
     height: 100vh;
     overflow: visible;
+    z-index: 0;
   }
 
   .mouse, .note1, .note2, .phone, .coffe {
     visibility: hidden;
   }
 
+  .vawes1, .vawes2, .vawes3 {
+    position: absolute;
+    transform: rotate(90deg);
+    left: 0px;
+    top: 100px;
+    height: 200px;
+    z-index: -1;
+  }
+  .vawes1 {
+    display: flex;
+    left: auto;
+    right: -160px;
+    top: 300px;
+    transform: scaleX(-1) rotate(90deg);
+  }
+  .vawes2 {
+    display: flex;
+    left: auto;
+    right: -160px;
+    top: 798px;
+    transform: scaleX(-1) scaleY(-1) rotate(90deg);
+  }
+  
+
   .laptop {
     animation: none;
+    
   }
 
   .nav-bar {
@@ -598,6 +629,7 @@ body {
     height: 200px;
     top: 80px;
     right: -80px;
+    z-index: 1;
   }
   .register-btn {
     margin-left: -40px;
@@ -668,6 +700,7 @@ body {
   .home-paper {
     background-color: #7B21FD;
     height: max-content;
+    position: relative;
   }
   .card {
     height: 223px;

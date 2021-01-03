@@ -17,6 +17,7 @@ import fb from '../Resources/fb.png'
 import registerIcon from '../Resources/register-icon.png'
 import arrows from '../Resources/arrows.png'
 
+
 export default function Home() {
     const myRef = useRef(null)
 
@@ -27,7 +28,10 @@ export default function Home() {
     return (
         <div className='home-container'>
             <div ref={myRef} className='home-paper'>
+            <img src={vawes} className='vawes3' alt='Be patient...'/>
                 <div className='paper-back'>
+                <img src={vawes} className='vawes1' alt='Be patient...'/>
+                <img src={vawes} className='vawes2' alt='Be patient...'/>
                     <img src={vawes} className='vawes' alt='Be patient...'/>
                     <img src={laptop} className='laptop' alt='Be patient...'/>
                     <img src={mouse} className='mouse' alt='Be patient...'/>

@@ -6,7 +6,7 @@ import Home from './Components/Home'
 
 function App() {
 
-  const [isLoaded, setIsLoaded] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(true)
   const [level, setLevel] = useState(5)
   console.log(isLoaded)
   console.log(level)
