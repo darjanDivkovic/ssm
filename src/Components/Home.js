@@ -58,6 +58,18 @@ export default function Home() {
                 </button>
                 </div>
                 <Cards />
+                <div className='bottom-mobile'>
+                <img src={arrows} className='arrows' alt='Be patient...'/>
+                <p>NAZAD NA VRH</p>
+                <button className='register-btn'>
+                    <img src={registerIcon} class='register-icon'/>
+                    REGISTRUJ SE
+                </button>
+                <a href='https://www.facebook.com/SolucijaMladihIMudrih' target='_' className='fb'>
+                        <img src={fb} className='fb-icon bottom' alt='Be patient...'/>
+                        SOLUCIJA MLADIH I MUDRIH
+                    </a>
+                </div>
             </div>
         </div>
     )
