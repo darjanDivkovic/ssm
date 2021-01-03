@@ -12,14 +12,21 @@ function App() {
   console.log(level)
   return (
     <div className='main'>
-      <button onClick={()=> setIsLoaded(prevIsLoaded => !prevIsLoaded)}>
+      {/* 
+        <button onClick={()=> setIsLoaded(prevIsLoaded => !prevIsLoaded)}>
               Change is loaded
-      </button>
-      <button onClick={() => setLevel(prevLevel => prevLevel > 0 ? --prevLevel : prevLevel)}>-</button>
-      <button onClick={() => setLevel(prevLevel => prevLevel < 10 ? ++prevLevel : prevLevel)}>+</button>
+        </button>
+        <button onClick={() => setLevel(prevLevel => prevLevel > 0 ? --prevLevel : prevLevel)}>-</button>
+        <button onClick={() => setLevel(prevLevel => prevLevel < 10 ? ++prevLevel : prevLevel)}>+</button>
+      */}
       {!isLoaded ? <Loader level={level}/> : <Home />}
     </div>
   );
 }
 
 export default App;
+
+/*
+
+
+*/

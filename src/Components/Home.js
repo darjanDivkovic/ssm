@@ -20,11 +20,10 @@ import arrows from '../Resources/arrows.png'
 
 export default function Home() {
     const myRef = useRef(null)
+    const myRef2 = useRef(null)
 
-    const executeSrcoll = () =>{
-        console.log('here')
-        myRef.current.scrollIntoView()
-    } 
+    const executeScrollTop = () => myRef.current.scrollIntoView()
+    const executeScrollCards = () => myRef2.current.scrollIntoView()
     return (
         <div className='home-container'>
             <div ref={myRef} className='home-paper'>
@@ -47,7 +46,7 @@ export default function Home() {
                         <a>FACEBOOK</a>
                         <a>INSTAGRAM</a>
                     </div>
-                    <div className='direction-div'>
+                    <div className='direction-div' onClick={() => executeScrollCards()}>
                         <p>ŠTA TREBATE URADITI ?</p>
                         <img src={arrows} className='arrows' alt='Be patient...'/>
                     </div>
@@ -67,9 +66,10 @@ export default function Home() {
                     REGISTRUJ SE
                 </button>
                 </div>
-                <Cards />
+                <hr ref={myRef2}/>
+                <Cards/>
                 <div className='bottom-mobile'>
-                <img onClick={() => executeSrcoll()}src={arrows} className='arrows' alt='Be patient...'/>
+                <img onClick={() => executeScrollTop()}src={arrows} className='arrows' alt='Be patient...'/>
                 <p>NAZAD NA VRH</p>
                 <button className='register-btn'>
                     <img src={registerIcon} class='register-icon'/>
