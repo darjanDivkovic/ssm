@@ -591,7 +591,13 @@ body {
   }
   .register-btn {
     margin-left: -40px;
-    height: 40px;
+    height: 30px;
+    width: 170px;
+    font-size: 10px;
+    border: 2px solid #fff;
+  }
+  .register-icon {
+    height: 20px;
   }
   .vawes {
     display: none;
@@ -637,6 +643,7 @@ body {
   .cards-upper {
     flex-direction: column;
     width: 100%;
+    margin-top: -115px;
   }
   .cards-lower {
     flex-direction: column;
@@ -647,10 +654,34 @@ body {
     height: max-content;
   }
   .card {
-    height: 220px;
+    height: 223px;
+    margin-bottom: 46px;
+    position: relative;
+  }
+  .card:nth-child() {
+    border: 2px solid #000;
+  }
+  .arrow {
+    position: absolute;
+    bottom: -78px;
+    z-index: 2;
+  }
+  .arrow.last {
+    display: none;
+  }
+  .card:hover {
+    margin: 5px;
+    margin-bottom: 46px;
+    z-index: 1;
+    cursor: pointer;
   }
   .card-header {
     width: 80%;
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+  .card-text {
+    font-size: 12px;
   }
   /* width */
 ::-webkit-scrollbar {

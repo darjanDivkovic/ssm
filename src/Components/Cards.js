@@ -33,7 +33,7 @@ export default function Cards() {
             </div>
             <div className='cards-lower'>
             <Card source={icon4} heading={headers[3]} text={texts[3]}/>
-            <Card source={icon5} heading={headers[4]} text={texts[4]}/>
+            <Card source={icon5} heading={headers[4]} text={texts[4]} last={true}/>
             </div>
         </div>
     )
