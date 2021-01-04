@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 import Cards from './Cards'
 import Login from './Login'
@@ -17,15 +17,23 @@ import fb from '../Resources/fb.png'
 import registerIcon from '../Resources/register-icon.png'
 import arrows from '../Resources/arrows.png'
 
+import Form from '../Components/FormComponent'
 
 export default function Home() {
     const myRef = useRef(null)
     const myRef2 = useRef(null)
+    const [ isFormOpen, setFormOpen ] = useState(false)
+
 
     const executeScrollTop = () => myRef.current.scrollIntoView()
     const executeScrollCards = () => myRef2.current.scrollIntoView()
     return (
         <div className='home-container'>
+            { isFormOpen ?
+              <Form setFormOpen={setFormOpen}/>
+              :
+              null
+            }
             <div ref={myRef} className='home-paper'>
             <img src={vawes} className='vawes3' alt='Be patient...'/>
                 <div className='paper-back'>
@@ -61,17 +69,18 @@ export default function Home() {
                 </div>
                 <div className='text-container'>
                 <p className='hero-text'>Postani dio mlade i sposobne organizacije,</p>
-                <button className='register-btn'>
+                <button className='register-btn'
+                        onClick={() => setFormOpen(true)}>
                     <img src={registerIcon} class='register-icon'/>
                     REGISTRUJ SE
                 </button>
                 </div>
-                <hr ref={myRef2}/>
+                <hr ref={myRef2} style={{visibility: 'hidden'}}/>
                 <Cards/>
                 <div className='bottom-mobile'>
                 <img onClick={() => executeScrollTop()}src={arrows} className='arrows' alt='Be patient...'/>
                 <p>NAZAD NA VRH</p>
-                <button className='register-btn'>
+                <button className='register-btn' onClick={() => setFormOpen(true)}>
                     <img src={registerIcon} class='register-icon'/>
                     REGISTRUJ SE
                 </button>
