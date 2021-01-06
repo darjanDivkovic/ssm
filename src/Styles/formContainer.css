@@ -144,6 +144,7 @@
   position: absolute;
   bottom: 70px;
   right: 10px;
+  max-height: 100px;
   transition: 0.4s;
   cursor: pointer;
 }
@@ -240,4 +241,33 @@
     padding-left: 10px;
     border-left: 1px solid #000;
     cursor: pointer;
+}
+
+.gender-from-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.gender-from-container img {
+  height: 150px;
+  cursor: pointer;
+}
+
+.gender-from-container button {
+  background: none;
+  border: none;
+  outline: none;
+  transition: 0.35s;
+}
+
+.gender-btn {
+  transform: scale(1);
+  filter: opacity(0.6) drop-shadow(0 0 0 black);
+}
+
+.gender-btn-selected {
+  transform: scale(1.2);
 }

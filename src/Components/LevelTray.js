@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import HEADERS from './Constants'
 
 export default function LevelTray(props) {
@@ -12,7 +12,6 @@ export default function LevelTray(props) {
     margin-left: 0;
     top: -8px;
     position: absolute;
-    transition: 1s;
     `
     const Beadle = styled.div`
       width: 12px;
@@ -23,7 +22,7 @@ export default function LevelTray(props) {
       align-items: center;
       position: realative;
     `
-
+    
     const { level } = props
     return (
         <div className='level-tray'>
