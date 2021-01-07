@@ -3,7 +3,8 @@ import React from "react";
 import CredentialsForm from "../Components/CredentialsForm";
 import ErrorMessage from "../Components/ErrorMessage";
 import Next from "../Resources/next.png";
-import GenderForm from '../Components/GenderForm'
+import GenderForm from "../Components/GenderForm";
+import BirthdayForm from '../Components/BirthdayForm';
 
 export default function Question(props) {
   const {
@@ -46,20 +47,25 @@ export default function Question(props) {
           />
         );
         break;
-      case 2: 
-          return (
-          <GenderForm 
-           setErrorMsg={setErrorMsg}
-           changeLevel={changeLevel}
-          />
-          )
+      case 2:
+        return (
+          <GenderForm setErrorMsg={setErrorMsg} changeLevel={changeLevel} />
+        );
+        break;
+      case 3:
+        return (
+          <BirthdayForm setErrorMsg={setErrorMsg} changeLevel={changeLevel} />
+        );
+        break;
       default:
         break;
     }
   };
   return (
     <div className="question-container">
-      <p style={level === 2 ? {textAlign:'center'} : {textAlign: 'left'}}>{heading}</p>
+      <p style={level === 2 || 3 ? { textAlign: "center" } : { textAlign: "left" }}>
+        {heading}
+      </p>
       {renderSwitch(level)}
 
       <div className="level-tracker-container">

@@ -271,3 +271,36 @@
 .gender-btn-selected {
   transform: scale(1.2);
 }
+
+.birthday-form-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.date-picker {
+  margin: 0 20px;
+  width: max-content;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.date-picker p {
+  letter-spacing: 7px;
+}
+
+.arrow-small-upper, .arrow-small-lower {
+  position: absolute;
+  cursor: pointer;
+}
+
+.arrow-small-upper {
+  top: 0;
+}
+.arrow-small-lower {
+  bottom: 0;
+}
